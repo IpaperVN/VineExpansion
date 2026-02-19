@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.ipapervn</groupId>
-    <artifactId>VineExpansion</artifactId>
+    <artifactId>VineCoinsExpansion</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -15,6 +15,10 @@
     </properties>
 
     <repositories>
+            <repository>
+                <id>local-repo</id>
+                <url>file://${project.basedir}/libs</url>
+            </repository>
         <repository>
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
@@ -47,7 +51,6 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/VineCoins-1.5-SNAPSHOT.jar</systemPath>
         </dependency>
-
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>

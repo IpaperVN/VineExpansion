@@ -65,12 +65,13 @@ public class VineCoinsExpansion extends PlaceholderExpansion {
         if (args.length >= 2) {
             return switch (args[1]) {
                 case "formatted" -> formatter.format(balance);
-                case "fixed" -> String.format("%.2f", balance);
+                case "fixed" -> String.format("%.1f", balance);
+                case "raw" -> String.valueOf(balance);
                 default -> String.valueOf((int) balance);
             };
         }
 
         // Mặc định trả về số nguyên nếu không ghi định dạng
-        return String.valueOf((int) balance);
+        return String.valueOf(balance);
     }
 }
